@@ -1,0 +1,13 @@
+
+
+A Java implementation of the Deferred library for Google App Engine, providing a convenient abstraction layer over Task Queues for for deferring ad-hoc tasks. See http://code.google.com/appengine/articles/deferred.html for an article about the original Python library.
+
+This fork is based off a Java implementation by Vince Bonfanti, licenced under the Apache License, Version 2.0 ( http://www.apache.org/licenses/LICENSE-2.0 ). The original code is available at:
+
+http://code.google.com/p/gaevfs/source/browse/trunk/src/com/newatlanta/appengine/taskqueue/Deferred.java?spec=svn460&r=460
+
+See also this discussion on the Google App Engine for Java group:
+
+http://groups.google.com/group/google-appengine-java/browse_thread/thread/6f736624cc820d5b
+
+

@@ -6,6 +6,9 @@
     <artifactId>defer-parent</artifactId>
     <name>Defer Parent Project</name>
     <packaging>pom</packaging>
+    <scm>
+        <connection>git@github.com:rtyley/defer-for-java-google-app-engine.git</connection>
+    </scm>
     <distributionManagement>
         <repository>
             <id>releases</id>

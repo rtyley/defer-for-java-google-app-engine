@@ -1,9 +1,6 @@
 package com.newatlanta.appengine.taskqueue;
 
-import java.io.IOException;
 import java.io.Serializable;
-
-import com.newatlanta.appengine.taskqueue.Deferred.PermanentTaskFailure;
 
 /**
  * The <code>Deferrable</code> interface should be implemented by any class
@@ -11,7 +8,7 @@ import com.newatlanta.appengine.taskqueue.Deferred.PermanentTaskFailure;
  * implementation class must define a method with no arguments named
  * {@link Deferrable#doTask()}.
  */
-public interface Deferrable extends Serializable {
+public interface Deferrable extends Serializable, Runnable {
     /**
      * Invoked to perform the background task.
      * 
@@ -25,5 +22,5 @@ public interface Deferrable extends Serializable {
      * @throws IOException To indicate that the task should be retried. These
      * exceptions are not logged.
      */
-    public void doTask() throws ServletException, IOException;
+
 }

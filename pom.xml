@@ -7,7 +7,7 @@
     <name>Defer Parent Project</name>
     <packaging>pom</packaging>
     <scm>
-        <connection>scm:git:git://github.com:rtyley/defer-for-java-google-app-engine.git</connection>
+        <connection>scm:git:git://github.com/rtyley/defer-for-java-google-app-engine.git</connection>
     </scm>
     <distributionManagement>
         <repository>

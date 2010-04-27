@@ -1,4 +1,4 @@
-package com.newatlanta.appengine.taskqueue;
+package com.madgag.appengine.taskqueue;
 
 import static org.apache.commons.codec.binary.Base64.decodeBase64;
 import static org.apache.commons.codec.binary.Base64.encodeBase64;
@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 import com.google.appengine.api.labs.taskqueue.QueueFailureException;
 
-public class ObjectSerialisation {
+class ObjectSerialisation {
     
 	private static final Logger log = Logger.getLogger( TaskStore.class.getName() );
 	

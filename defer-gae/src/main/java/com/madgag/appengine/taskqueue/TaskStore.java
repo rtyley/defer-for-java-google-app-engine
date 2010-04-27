@@ -1,4 +1,4 @@
-package com.newatlanta.appengine.taskqueue;
+package com.madgag.appengine.taskqueue;
 
 import static com.google.appengine.api.datastore.DatastoreServiceFactory.getDatastoreService;
 
@@ -10,8 +10,9 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.inject.Inject;
+import com.madgag.appengine.taskqueue.Deferrable;
 
-public class TaskStore {
+class TaskStore {
 
 	private static final Logger log = Logger.getLogger( TaskStore.class.getName() );
 	

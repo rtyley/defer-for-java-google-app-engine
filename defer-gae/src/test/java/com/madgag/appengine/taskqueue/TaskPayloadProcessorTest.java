@@ -12,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.google.appengine.api.datastore.DatastoreApiHelper;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
@@ -21,14 +20,18 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TaskPayloadProcessorTest {
-
 	
 	private final LocalServiceTestHelper helper = new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
-	private final DatastoreApiHelper helper2 = new DatastoreApiHelper();
 
+	@Mock TaskStore taskStore;
+	@Mock ObjectSerialisation objectSerialisation;
+	Key key;
+	@Mock Deferrable deferrableExplosion;
+	
     @Before
     public void setUp() {
         helper.setUp();
+        key=KeyFactory.createKey("MyKey", "MyKeyPath");
     }
 
     @After
@@ -36,11 +39,6 @@ public class TaskPayloadProcessorTest {
         helper.tearDown();
     }
 	
-	@Mock TaskStore taskStore;
-	@Mock ObjectSerialisation objectSerialisation;
-	Key key=KeyFactory.createKey("MyKey", "MyKeyPath");
-	@Mock Deferrable deferrableExplosion;
-
 	@Test
 	public void shouldNotDeleteKeyIfTaskFailsAndShouldBeRepeated() throws Exception {
 		doThrow(new RuntimeException()).when(deferrableExplosion).run();

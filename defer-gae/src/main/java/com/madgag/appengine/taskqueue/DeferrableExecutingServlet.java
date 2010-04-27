@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 
 @SuppressWarnings("serial")
+@Singleton
 public class DeferrableExecutingServlet extends HttpServlet {
     
     private static final Logger log = Logger.getLogger( DeferrableExecutingServlet.class.getName() );

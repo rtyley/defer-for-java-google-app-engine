@@ -11,8 +11,6 @@ import com.google.appengine.api.labs.taskqueue.QueueFailureException;
 import com.google.appengine.api.labs.taskqueue.TaskHandle;
 import com.google.appengine.api.labs.taskqueue.TaskOptions;
 import com.google.inject.Inject;
-import com.madgag.appengine.taskqueue.Deferrable;
-import com.madgag.appengine.taskqueue.Deferrer;
 
 public class TaskQueueDeferrer implements Deferrer<TaskHandle> {
 

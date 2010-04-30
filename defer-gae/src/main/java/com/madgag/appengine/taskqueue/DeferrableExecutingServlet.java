@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 
 @SuppressWarnings("serial")
+@Singleton
 public class DeferrableExecutingServlet extends HttpServlet {
     
     private static final Logger log = Logger.getLogger( DeferrableExecutingServlet.class.getName() );
@@ -33,19 +35,27 @@ public class DeferrableExecutingServlet extends HttpServlet {
      * retrieve (then delete) the Deferrable instance from the datastore.
      */
     @Override
-    public void doPost( HttpServletRequest req, HttpServletResponse res ) {
-        if ( req.getContentLength() == 0 ) {
+    public void doPost( HttpServletRequest request, HttpServletResponse res ) {
+        if ( request.getContentLength() == 0 ) {
             log.severe( "request content length is 0" );
             return;
         }
-        try {
+        
+        Object payload=payloadFrom(request);
+        if (payload!=null) {
+        	taskPayloadProcessor.processPayload(payload);
+        }
+    }
+
+	private Object payloadFrom(HttpServletRequest req) {
+		try {
             byte[] bytesIn = new byte[ req.getContentLength() ];
             req.getInputStream().readLine( bytesIn, 0, bytesIn.length );
-            Object payload = objectSerialisation.deserialize( bytesIn );
-            taskPayloadProcessor.processPayload(payload);
+            return objectSerialisation.deserialize( bytesIn );
         } catch ( IOException e ) {
             log.log(SEVERE, "Error deserializing task", e );
         }
-    }
+        return null;
+	}
 
 }

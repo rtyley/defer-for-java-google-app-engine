@@ -12,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.google.appengine.api.datastore.DatastoreApiHelper;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
@@ -24,7 +23,6 @@ public class TaskPayloadProcessorTest {
 
 	
 	private final LocalServiceTestHelper helper = new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
-	private final DatastoreApiHelper helper2 = new DatastoreApiHelper();
 
     @Before
     public void setUp() {

@@ -4,10 +4,10 @@
 	<artifactId>defer</artifactId>
 	<name>Defer</name>
 	<packaging>jar</packaging>
-	<version>1.4-SNAPSHOT</version>
+	<version>1.4</version>
 	<parent>
 		<groupId>com.madgag</groupId>
 		<artifactId>defer-parent</artifactId>
-		<version>1.4-SNAPSHOT</version>
+		<version>1.4</version>
 	</parent>
 </project>

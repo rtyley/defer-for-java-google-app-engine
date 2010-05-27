@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer;
 
 /**
  * If thrown by the {@link Deferrable#doTask() doTask()} method, indicates

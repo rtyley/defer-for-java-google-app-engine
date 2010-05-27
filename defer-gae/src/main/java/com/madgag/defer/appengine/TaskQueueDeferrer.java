@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import static com.google.appengine.api.labs.taskqueue.QueueConstants.maxTaskSizeBytes;
 import static com.google.appengine.api.labs.taskqueue.QueueFactory.getQueue;
@@ -11,6 +11,8 @@ import com.google.appengine.api.labs.taskqueue.QueueFailureException;
 import com.google.appengine.api.labs.taskqueue.TaskHandle;
 import com.google.appengine.api.labs.taskqueue.TaskOptions;
 import com.google.inject.Inject;
+import com.madgag.defer.Deferrable;
+import com.madgag.defer.Deferrer;
 
 public class TaskQueueDeferrer implements Deferrer<TaskHandle> {
 

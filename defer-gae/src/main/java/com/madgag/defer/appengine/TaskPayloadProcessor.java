@@ -1,9 +1,11 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import java.util.logging.Logger;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.inject.Inject;
+import com.madgag.defer.Deferrable;
+import com.madgag.defer.PermanentTaskFailure;
 
 public class TaskPayloadProcessor {
 

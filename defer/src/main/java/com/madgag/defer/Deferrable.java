@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer;
 
 import java.io.Serializable;
 

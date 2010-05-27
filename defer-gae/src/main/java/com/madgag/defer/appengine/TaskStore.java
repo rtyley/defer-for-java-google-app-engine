@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import static java.util.logging.Level.FINE;
 import static java.util.logging.Level.SEVERE;
@@ -13,6 +13,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.inject.Inject;
+import com.madgag.defer.Deferrable;
 
 class TaskStore {
 

@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import static org.apache.commons.codec.binary.Base64.decodeBase64;
 import static org.apache.commons.codec.binary.Base64.encodeBase64;

@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import static java.util.logging.Level.SEVERE;
 

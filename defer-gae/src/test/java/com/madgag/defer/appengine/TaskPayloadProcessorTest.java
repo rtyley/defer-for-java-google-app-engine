@@ -1,4 +1,4 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
 import static junit.framework.Assert.fail;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -19,6 +19,11 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.madgag.defer.Deferrable;
+import com.madgag.defer.PermanentTaskFailure;
+import com.madgag.defer.appengine.ObjectSerialisation;
+import com.madgag.defer.appengine.TaskPayloadProcessor;
+import com.madgag.defer.appengine.TaskStore;
 
 
 @RunWith(MockitoJUnitRunner.class)

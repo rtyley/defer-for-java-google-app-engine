@@ -21,6 +21,7 @@
 	<modules>
 		<module>defer</module>
 		<module>defer-gae</module>
+		<module>defer-standard-jre</module>
 	</modules>
 	<dependencies>
 		<dependency>

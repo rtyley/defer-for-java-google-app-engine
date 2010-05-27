@@ -1,7 +1,7 @@
-package com.madgag.appengine.taskqueue;
+package com.madgag.defer.appengine;
 
-import static com.madgag.appengine.taskqueue.TaskStore.ENTITY_KIND;
-import static com.madgag.appengine.taskqueue.TaskStore.TASK_PROPERTY;
+import static com.madgag.defer.appengine.TaskStore.ENTITY_KIND;
+import static com.madgag.defer.appengine.TaskStore.TASK_PROPERTY;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -20,6 +20,8 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.madgag.defer.appengine.ObjectSerialisation;
+import com.madgag.defer.appengine.TaskStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TaskStoreTest {
